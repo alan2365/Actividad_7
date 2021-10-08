@@ -16,17 +16,22 @@ public class Actividad {
     
      public static void sucesionFibonacci (int serie) {
         int num1 = 0, num2 = 1, suma = 1;
- 
+        int [] arreglo = new int[serie];
+        
         System.out.println("Sucesión de Fibonacci:");
          
         for (int i = 1; i < serie; i++) {
              
-            System.out.print(suma + ", ");
+            arreglo[i]=suma;
              
             suma = num1 + num2;
             num1 = num2;
             num2 = suma;
         }
+        
+         for (int i = 0; i < arreglo.length; i++) {
+             System.out.print(arreglo[i] + ", ");
+         }
     }
 
     public static void primo(int numero) {
